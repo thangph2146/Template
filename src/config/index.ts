@@ -6,7 +6,7 @@ export const LANGUAGE: ISelect[] = [
 ];
 
 const CONFIG = {
-  API_BASE_URL: process.env.API_BASE_URL || "https://metanode.co/",
+  API_BASE_URL: process.env.API_BASE_URL || "https://pokeapi.co/",
   APP_NAME: process.env.APP_NAME || "Poke_Desk",
   LOGIN_PAGE: "/#",
   SSO_PAGE: "/#",
