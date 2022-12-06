@@ -1,0 +1,16 @@
+.side-bar {
+  .ant-menu-item,
+  .ant-menu-submenu {
+    &:hover {
+      background-color: #e6f7ff;
+    }
+    &.ant-menu-submenu-selected {
+      background-color: #e6f7ff;
+    }
+    .ant-menu-submenu-title {
+      .ant-menu-title-content {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
