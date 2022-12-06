@@ -32,23 +32,23 @@ export const CheckPermissionFunc = lodash.memoize(
   }
 );
 
-// export const useCheckPermission = (...permissionCodes: any[]) => {
-//   const { listPermissionCode } = useSelector((state: RootState) => state.profile);
-//   return permissionCodes.map(permissionCode =>
-//     CheckPermissionFunc(permissionCode, listPermissionCode)
-//   );
-// };
+export const useCheckPermission = (...permissionCodes: any[]) => {
+  const { listPermissionCode } = useSelector((state: RootState) => state.profile);
+  return permissionCodes.map(permissionCode =>
+    CheckPermissionFunc(permissionCode, listPermissionCode)
+  );
+};
 
-// const CheckPermission = (props: IProps) => {
-//   const { permissionCode, children } = props;
-//   if (children == null) {
-//     return null;
-//   }
-//   const { listPermissionCode } = useSelector((state: RootState) => state.profile);
-//   if (CheckPermissionFunc(permissionCode, listPermissionCode)) {
-//     return children;
-//   }
-//   return null;
-// };
+const CheckPermission = (props: IProps) => {
+  const { permissionCode, children } = props;
+  if (children == null) {
+    return null;
+  }
+  const { listPermissionCode } = useSelector((state: RootState) => state.profile);
+  if (CheckPermissionFunc(permissionCode, listPermissionCode)) {
+    return children;
+  }
+  return null;
+};
 
-// export default CheckPermission;
+export default CheckPermission;
